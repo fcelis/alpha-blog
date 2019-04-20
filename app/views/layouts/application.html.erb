@@ -74,18 +74,15 @@
 
     </style>
   </head>
-
   <body>
     <div id="logo">
       <%= link_to image_tag("logowhite.png",  width: '200px'), 'wwww.alpine-usa.com' %>
     </div>
     <header>
       <h2>Alpha Blog</h2>
-
       <div id="menu">
         <div id="link_bar" class="table ">
           <ul id="horizontal-list">
-
             <li><%= link_to 'About', about_path %></li>
           </ul>
         </div>
@@ -97,7 +94,6 @@
     </ul>
   <% end %>
     <%= yield %>
-
   <footer>
     <p>Alpha Blog Footer</p>
   </footer>
