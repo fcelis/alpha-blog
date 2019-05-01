@@ -1,4 +1,4 @@
-$navbar-default-bg:#0066CC;
+$navbar-default-bg:#00549a;
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 // @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -19,13 +19,13 @@ html, body{
 }
 
 .bg-blue{
-  background-color: #0066CC;
+  background-color: #00549a;
   color: #FFFFFF;
 }
 #logo{
   float: left;
     text-align: left;
-    background-color: #0066CC;
+    background-color: #00549a;
     padding: 10px;
 }
 .center {
