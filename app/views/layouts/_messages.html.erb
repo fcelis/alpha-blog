@@ -1,12 +1,12 @@
 <div class="card card-alert-success" >
    <div class="card-body">
       <% flash.each do |name, msg| %>
-     <div class="alert alert-success fade show" role="alert">
-	<%= msg %>
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	    <span aria-hidden="true">&times;</span>
-	  </button>
-     </div>
+	 <div class='alert alert-<%="#{name}" %> fade show role="alert" '>
+	     <%= content_tag :div, msg, :id =>"flash_#{name}" if msg.is_a?(String) %>
+	     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	     </button>
+        </div>
       <% end %>
    </div>
 </div>
