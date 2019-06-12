@@ -1,22 +1,23 @@
 require 'test_helper'
-class CategoriesControllerTest < ActionController::TestCase
-begin
- def setup
-    @category = Category.create(name: "Sports")
- end
- 
-    test "should get categories index" do
-        get :index
-        assert_response :success
-    end
 
-    test "should get new " do
-    get :new
-    assert_response :success
-    end
+class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
-    test "should get show " do
-    get(:show, {'id' => @category.id}
-    assert_response :success
-    end
+   def setup
+     @category = Category.create(name: "sports")
+   end
+
+   test "should get categories index" do
+     get categories_path
+     assert_response :success
+   end
+
+   test "should get new" do
+     get new_category_path
+     assert_response :success
+   end
+
+   test "should get show" do
+	get category_path(@category)
+      	assert_response :success
+   end
 end
