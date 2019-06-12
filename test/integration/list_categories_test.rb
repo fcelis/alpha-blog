@@ -10,4 +10,10 @@ class ListCategoriesTest < ActionDispatch::IntegrationTest
 		assert_select "a[href=?]", category_path(@category), text: @category.name 
 		assert_select "a[href=?]", category_path(@category2), text: @category2.name
         end
+	test "should redirect to create when admin not logged in" do 
+		assert_no_difference 'Category.count' do
+	        post categories_path, params: { category: {name: "Sport"}}
+		end 
+		follow_redirect!
+	end 
 end
